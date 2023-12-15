@@ -1,0 +1,1 @@
+export { ClickBehaviorSidebarHeader } from "./ClickBehaviorSidebarHeader";

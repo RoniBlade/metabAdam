@@ -1,0 +1,50 @@
+2023-11-30 14:19:01,782 INFO metabase.util :: Maximum memory available to JVM: 2.9 GB
+operator.clj:172 recur arg for primitive local: sum is not matching primitive, had: Object, needed: long
+Auto-boxing loop arg: sum
+2023-11-30 14:19:16,922 WARN db.env :: [31mWARNING: Using Metabase with an H2 application database is not recommended for production deployments. For production deployments, we highly recommend using Postgres, MySQL, or MariaDB instead. If you decide to continue to use H2, please be sure to back up the database file regularly. For more information, see https://metabase.com/docs/latest/operations-guide/migrating-from-h2.html[0m
+2023-11-30 14:19:18,388 INFO util.encryption :: Saved credentials encryption is DISABLED for this Metabase instance. 🔓 
+ For more information, see https://metabase.com/docs/latest/operations-guide/encrypting-database-details-at-rest.html
+yarn run v1.22.21
+$ rm -f target/cljs_dev/cljs.core.js && yarn concurrently -n 'cljs,js' -c 'yellow,green' 'yarn build-hot:cljs' 'yarn build-hot:js-wait'
+$ yarn && concurrently --kill-others -p name -n cljs,js -c yellow,green 'yarn build-hot:cljs' 'yarn build-hot:js-wait'
+$ echo $npm_execpath | grep -q yarn || echo '\033[0;33mSorry, npm is not supported. Please use Yarn (https://yarnpkg.com/).\033[0m'
+[1/5] Validating package.json...
+[2/5] Resolving packages...
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "json5@2.2.2" is incompatible with requested version "json5@^2.2.3"
+warning Resolution field "json5@2.2.2" is incompatible with requested version "json5@^1.0.1"
+warning Resolution field "set-value@4.0.1" is incompatible with requested version "set-value@^2.0.0"
+warning Resolution field "unset-value@2.0.1" is incompatible with requested version "unset-value@^1.0.0"
+warning Resolution field "set-value@4.0.1" is incompatible with requested version "set-value@^2.0.1"
+warning Resolution field "nth-check@2.0.1" is incompatible with requested version "nth-check@^1.0.2"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "json5@2.2.2" is incompatible with requested version "json5@^1.0.1"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^6.0.1"
+success Already up-to-date.
+$ husky install
+husky - Git hooks installed
+[cljs] $ yarn && shadow-cljs watch app
+[js] $ yarn wait:cljs; yarn build-hot:js
+[js] $ echo Waiting for first CLJS build; until [ -f target/cljs_dev/cljs.core.js ]; do sleep 1; done; echo CLJS build done
+[cljs] $ echo $npm_execpath | grep -q yarn || echo '\033[0;33mSorry, npm is not supported. Please use Yarn (https://yarnpkg.com/).\033[0m'
+[js] Waiting for first CLJS build
+[cljs] [1/5] Validating package.json...
+[cljs] [2/5] Resolving packages...
+[cljs] warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+[cljs] warning Resolution field "json5@2.2.2" is incompatible with requested version "json5@^2.2.3"
+[cljs] warning Resolution field "json5@2.2.2" is incompatible with requested version "json5@^1.0.1"
+[cljs] warning Resolution field "set-value@4.0.1" is incompatible with requested version "set-value@^2.0.0"
+[cljs] warning Resolution field "unset-value@2.0.1" is incompatible with requested version "unset-value@^1.0.0"
+[cljs] warning Resolution field "set-value@4.0.1" is incompatible with requested version "set-value@^2.0.1"
+[cljs] warning Resolution field "nth-check@2.0.1" is incompatible with requested version "nth-check@^1.0.2"
+[cljs] warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+[cljs] warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+[cljs] warning Resolution field "json5@2.2.2" is incompatible with requested version "json5@^1.0.1"
+[cljs] warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^6.0.1"
+[cljs] success Already up-to-date.
+[cljs] $ husky install
+[cljs] husky - Git hooks installed
+[cljs] yarn build-hot:cljs exited with code SIGTERM
+--> Sending SIGTERM to other processes..
+[js] yarn build-hot:js-wait exited with code SIGTERM
