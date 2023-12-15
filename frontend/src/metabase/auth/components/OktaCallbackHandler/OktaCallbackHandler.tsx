@@ -11,7 +11,6 @@ const OktaCallbackHandler = () => {
       oktaAuth.handleAuthentication()
         .then(() => {
           if (authState.isAuthenticated && authState.user) {
-            // Вы можете здесь использовать информацию о пользователе
             console.log("Пользователь аутентифицирован: ", authState.user);
           }
           // Перенаправить пользователя после успешной аутентификации
